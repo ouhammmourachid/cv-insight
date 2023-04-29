@@ -33,7 +33,7 @@ CV Analyzer was created by :
 - [rachid ouhammou](https://github.com/ouhammmourachid).
 - youssef kimit.
 - oussama hrita.
-as part of a a pproject for the AI competition. It is licensed under the MIT License.
+As part of a a pproject for the AI competition. It is licensed under the MIT License.
 
 ## Contact
 

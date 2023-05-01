@@ -1,5 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=’stylesheet’ type="text/css" href="{% static 'website/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <title>cv-insight</title>
 
-.HomeWrapper {
+    <!--
+    <style>
+        .HomeWrapper {
     display: flex;
     justify-content: center;
 }
@@ -17,7 +29,7 @@
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    
+
 }
 
 .Confortaa-text {
@@ -52,6 +64,7 @@
 }
 
 .ErrorTitle {
+    font-weight: bold;
     font-weight: 300;
 }
 
@@ -70,7 +83,7 @@
 .HomeLogo {
     height: 60px;
 }
-  
+
 
 .NavContainer {
     padding: 30px;
@@ -86,10 +99,10 @@
     font-size: 18px;
     text-align: center;
     max-width: 200px;
-    color: white; 
+    color: white;
     border-radius: 30px;
     background-color: #5843E4;
-    
+
 }
 
 .UploadWrapper {
@@ -100,7 +113,7 @@
 }
 
 .UploadText {
-    font: bold;
+
     font-weight: 300;
 }
 
@@ -115,31 +128,31 @@
     width: 85%;
     margin: auto;
   }
-  
+
   .user-info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
-  
+
   .user-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-right: 20px;
   }
-  
+
   .user-name {
     margin: 0;
   }
-  
+
   .user-sections {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
   }
-  
+
 .section {
     width: 48%;
     padding: 10px;
@@ -152,12 +165,12 @@
     color: #5843E4;
     margin-bottom: 10px;
 }
-  
+
 .section-1,
 .section-2 {
     margin-bottom: 20px;
 }
-  
+
 .section-3,
 .section-4 {
     margin-top: 20px;
@@ -172,3 +185,24 @@
     padding-top: 50px;
     right: 0;
 }
+
+    </style>
+    -->
+</head>
+<body>
+    <nav class="NavContainer Confortaa-text">
+        <a to="#">
+            {% load static %}
+          <img class="HomeLogo" src="{% static 'website/media/dark-logo.png' %}" />
+        </a>
+        <div>
+          <a class="StyledLink" href="/">Home</a>
+          <a class="StyledLink" href="#">About us</a>
+          <a class="StyledLinkFull" href="/upload-cv">Analyze CV</a>
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

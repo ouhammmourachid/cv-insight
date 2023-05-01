@@ -19,21 +19,22 @@ To use the CV Analyzer application, simply upload one or more CVs using the "Upl
 
 ## Contributing
 
-If you'd like to contribute to the CV Analyzer project, please follow these steps:
+If you'd like to contribute to the CV Analyzer project,please follow these steps:
 
 1. Fork the repository: `https://github.com/ouhammmourachid/cv-insight.git`
 2. Create a new branch for your changes: `git checkout -b my-new-feature`
 3. Make your changes and commit them: `git commit -am 'Add some feature'`
 4. Push your changes to your fork: `git push origin my-new-feature`
 5. Submit a pull request to the main repository.
-
+6. To see the Figma prototype for the website visit this [Link](https://www.figma.com/file/m1TUL7Hc4WUgK5ODQIkbSj/cv-insight-design?node-id=3%3A222&t=5mE8ucBqQWNLbLT4-1)
 ## Credits
 
 CV Analyzer was created by :
 - [rachid ouhammou](https://github.com/ouhammmourachid).
 - youssef kimit.
 - oussama hrita.
-As part of a a pproject for the AI competition. It is licensed under the MIT License.
+
+As part of a a pproject for the AI competition. 
 
 ## Contact
 

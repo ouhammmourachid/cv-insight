@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-    <title>cv-iinsight</title>
-</head>
-<body>
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
     <div class="card Confortaa-text">
         <div class="user-info">
-          <img class="user-image" src="./assets/download.jfif" alt="User Image">
+          <img class="user-image" src="{% static 'website/media/download.jfif' %}" alt="User Image">
           <h3 class="user-name">John Doe</h3>
         </div>
         <div class="user-sections">
@@ -33,14 +25,12 @@
           </div>
         </div>
       </div>
-      
       <div class="DonloadContainer">
         <h4 class="Confortaa-text">
             Download result on format
         </h4>
-        <a>
-            <img src="./assets/download-exl.svg" alt="download exl">
-        </a>
+          <a href="{% url 'download_file' file_path='uploaded/excel/analysis_results.' %}" download>
+            <img src="{% static 'website/media/download-exl.svg' %}" alt="download excel">
+          </a>
       </div>
-</body>
-</html>
+{% endblock %}

@@ -2,23 +2,27 @@
 {% load static %}
 {% block content %}
     <div class="UploadWrapper Confortaa-text">
-        <p class="UploadText">Streamline your hiring process with our powerful CV analysis tool. Upload CVs to extract valuable candidate information and make informed hiring decisions.</p>
-        <form method="post" enctype="multipart/form-data" class="UploadForm">
-            {% csrf_token %}
-            <textarea id="prompt" name="prompt" rows="4" cols="50" placeholder="C++,python,java" class="UploadTextArea"></textarea>
-            <div>
-                <label for="file" >
-                    <img src="{% static 'website/media/upload-file.svg' %}" alt="upload file">
-                </label>
-                <input id="file" type="file" name="myFile" style="display:none;">
-            </div>
-            <div>
-                <label for="folder" >
-                    <img src="{% static 'website/media/upload-folder.svg' %}" alt="upload folder">
-                </label>
-                <input id="folder" type="file" name="myFolder" style="display:none;">
-            </div>
-            <button type="submit" class="button-55">start analyse</button>
-        </form>
+        <p class="UploadText">
+            Streamline your hiring process with our powerful CV analysis tool.
+            Upload CVs to extract valuable candidate information and make informed hiring decisions.</p>
+        <div class="UploadForm">
+            <form method="post" enctype="multipart/form-data" >
+                {% csrf_token %}
+                <textarea id="prompt" name="prompt" rows="4" cols="50" placeholder="C++,python,java" class="UploadTextArea"></textarea>
+                <div class="UploadFolderOrFile">
+                    <label for="file" >
+                        <img src="{% static 'website/media/upload-file.svg' %}" alt="upload file">
+                    </label>
+                    <input id="file" type="file" name="myFile" style="display:none;">
+                    <p style="font-weight: bold">Or</p>
+                    <label for="folder" >
+                        <img src="{% static 'website/media/upload-folder.svg' %}" alt="upload folder">
+                    </label>
+                    <input id="folder" type="file" name="myFolder" style="display:none;">
+                </div>
+                <button type="submit" class="button-55">start analyse</button>
+            </form>
+        </div>
+
     </div>
 {% endblock %}

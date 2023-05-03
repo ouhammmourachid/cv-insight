@@ -30,9 +30,11 @@ def extract_info(data: list) -> list:
             "email": item[1],
             "phone_number": item[2],
             "address": item[3],
-            "path": item[4].split(','),
-            "skills": item[5],
-            "score": item[-1],
+            "expert": item[4],
+            "expro": item[5],
+            "path": item[6].split(','),
+            "skills": item[7],
+            "score": round(item[-1], 2),
             "image": '_'.join(item[0].split())+".png",
         })
         array_to_img(item[-2], './website/static/website/'+'_'.join(item[0].split())+".png")
@@ -43,14 +45,15 @@ def home(request):
     return render(request, 'website/home.html')
 
 
-def result(request):
-    return render(request, 'website/result.html',)
+def page_not_found_view(request, exception):
+    return render(request, 'website/error.html', status=404)
 
 
 def upload(request):
     clear_dirs('./uploaded')
     clear_dirs('./uploaded/excel')
     clear_dirs('./uploaded/cvs')
+    clear_dirs('./website/static/website/')
     if request.method == 'POST' and (request.FILES.get("myFile") or request.FILES.get("myFolder")):
         upload_dir = os.path.join(os.getcwd(), 'uploaded')
         prompt: str = request.POST['prompt'] if request.POST.get("prompt") else ""

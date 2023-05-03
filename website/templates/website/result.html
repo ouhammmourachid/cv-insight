@@ -5,7 +5,12 @@
     <div class="card Confortaa-text">
         <div class="user-info">
           <img class="user-image" src="{% static 'website/' %}{{ item.image }}" alt="User Image">
-          <h3 class="user-name">{{ item.name }}</h3>
+            <div style="display: flex;
+    flex-direction: column;">
+                <h3 class="user-name">{{ item.name }}</h3>
+                <h5>{{ item.expert }}</h5>
+            </div>
+
         </div>
         <div class="user-sections">
           <div class="section section-1">
@@ -29,9 +34,12 @@
             <p>{{ item.skills }}</p>
           </div>
           <div class="section section-4">
-            <h4 class="section-title">score</h4>
-            <p>{{ item.score }} %</p>
+            <h4 class="section-title">professional experience</h4>
+            <p>{{ item.expro }}</p>
           </div>
+        </div>
+        <div style="margin-left: 85%;">
+            <h4>score : {{ item.score }} %</h4>
         </div>
       </div>
     {% endfor %}

@@ -7,7 +7,7 @@ Address
 Speciality
 List of work experience (titles only)
 List of education diplomas (titles only)
-List of all skills
+List of skills
 Please it is necessary to return the information as a Python list in the following format:
 [ "full Name", "Email", "Telephone number", "Address", "Speciality", ["Work experience title 1", "Work experience title 2", ...], ["Education diploma title 1", "Education diploma title 2", ...], ["Skill 1", "Skill 2", ...] ].
 it is necessary to not add any additional text, line breaks, or explanations.the cv text is:

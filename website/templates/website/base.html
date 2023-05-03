@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=’stylesheet’ href="{% static 'style.css' %}">
+    <link rel="icon" type="image/svg" href="{% static 'website/media/meta-cv-insight.svg' %}">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <title>cv-insight</title>
     <style>
@@ -111,6 +112,12 @@
 }
 .UploadForm {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UploadFolderOrFile {
+    display: flex;
     flex-direction: row;
     align-items: center;
 }
@@ -122,7 +129,7 @@
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-radius: 15px 225px 255px 15px;
   border-style: solid;
   border-width: 2px;
   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
@@ -144,6 +151,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+    margin-left: 75%;
 }
 
 .button-55:hover {
@@ -157,10 +165,12 @@
 
 .UploadTextArea {
     width: 350px;
-    height: 200px;
+    height: 40px;
     padding: 10px;
     border:3px dashed #5843E4;
     background-color:aliceblue;
+    margin-left: 25%;
+    margin-top: 20px;
 }
 .UploadText {
 
@@ -176,7 +186,9 @@
     border-radius: 20px;
     padding: 20px;
     width: 85%;
-    margin: auto;
+    margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .user-info {
@@ -186,8 +198,8 @@
   }
 
   .user-image {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     margin-right: 20px;
   }
@@ -243,7 +255,7 @@
     <nav class="NavContainer Confortaa-text">
         <a to="#">
             {% load static %}
-          <img class="HomeLogo" src="{% static 'website/media/dark-logo.png' %}" />
+          <img class="HomeLogo" src="{% static 'website/media/dark-logo.svg' %}" />
         </a>
         <div>
           <a class="StyledLink" href="/">Home</a>

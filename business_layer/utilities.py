@@ -8,7 +8,7 @@ import cv2
 
 
 def store_data_xl_dir(directory,competence):
-    data=[['nom_complet','Email','tel','Adresse','Specialite','Experience professionelle','Formation','Competence']]
+    data=[['nom_complet','Email','tel','Adresse','Specialite','Experience professionelle','Formation','Competence','score']]
     d=[]
     for filename in tqdm(os.listdir(directory)):
         row=file_to_data(os.path.join(directory,filename))
@@ -23,7 +23,7 @@ def store_data_xl_dir(directory,competence):
     return d
 
 def store_data_xl_file(filename,competence):
-    data=[['nom_complet','Email','tel','Adresse','Specialite','Experience professionelle','Formation','Competence']]
+    data=[['nom_complet','Email','tel','Adresse','Specialite','Experience professionelle','Formation','Competence','score']]
     d=[]
     row=file_to_data(filename)
     s=scoring(row,competence)

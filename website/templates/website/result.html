@@ -29,8 +29,8 @@
         <h4 class="Confortaa-text">
             Download result on format
         </h4>
-        <a>
-            <img src="{% static 'website/media/download-exl.svg' %}" alt="download exl">
-        </a>
+          <a href="{% url 'download_file' file_path='uploaded/excel/analysis_results.' %}" download>
+            <img src="{% static 'website/media/download-exl.svg' %}" alt="download excel">
+          </a>
       </div>
 {% endblock %}

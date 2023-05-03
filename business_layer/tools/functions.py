@@ -96,7 +96,7 @@ def cutImage(pdf_path):
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
     if len(faces) == 1:
         x, y, w, h = faces[0]
-        face = img[y-20:y+h+10, x:x+w+2]
+        face = img[y-30:y+h+15, x-5:x+w+5]
     if(os.path.exists(output_path)):
         os.remove(output_path)
     return face

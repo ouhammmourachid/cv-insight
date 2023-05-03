@@ -1,5 +1,6 @@
 import PyPDF2
 
+
 def pdf_to_text(pdf_file):
     with open(pdf_file, 'rb') as pdf_file:
         pdf_reader = PyPDF2.PdfReader(pdf_file)
@@ -10,3 +11,4 @@ def pdf_to_text(pdf_file):
             page_text = page.extract_text()
             text += page_text
     return text
+

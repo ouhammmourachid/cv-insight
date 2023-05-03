@@ -1,7 +1,9 @@
 import openpyxl
 import os
+
+
 def data_to_xlsx(data):
-    filename='business_layer/Documents/cv_infos.xlsx'
+    filename = './uploaded/excel/analysis_results.xlsx'
     if os.path.exists(filename):
         os.remove(filename)
     workbook = openpyxl.Workbook()
@@ -9,3 +11,4 @@ def data_to_xlsx(data):
     for row in data:
         worksheet.append(row)
     workbook.save(filename)
+

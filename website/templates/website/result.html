@@ -1,35 +1,45 @@
 {% extends 'website/base.html' %}
 {% load static %}
 {% block content %}
+    {% for item in info %}
     <div class="card Confortaa-text">
         <div class="user-info">
-          <img class="user-image" src="{% static 'website/media/download.jfif' %}" alt="User Image">
-          <h3 class="user-name">John Doe</h3>
+          <img class="user-image" src="{% static 'website/' %}{{ item.image }}" alt="User Image">
+          <h3 class="user-name">{{ item.name }}</h3>
         </div>
         <div class="user-sections">
           <div class="section section-1">
-            <h4 class="section-title">Section 1</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h4 class="section-title">Contact info</h4>
+            <ul>
+                <li>{{ item.email }}</li>
+                <li>{{ item.phone_number }}</li>
+                <li>{{ item.address }}</li>
+            </ul>
           </div>
           <div class="section section-2">
-            <h4 class="section-title">Section 2</h4>
-            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h4 class="section-title">Education and qualifications</h4>
+              <ul>
+                  {% for path in item.path %}
+                      <li>{{ path }}</li>
+                  {% endfor %}
+              </ul>
           </div>
           <div class="section section-3">
-            <h4 class="section-title">Section 3</h4>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h4 class="section-title">Skills and abilities</h4>
+            <p>{{ item.skills }}</p>
           </div>
           <div class="section section-4">
-            <h4 class="section-title">Section 4</h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <h4 class="section-title">score</h4>
+            <p>{{ item.score }} %</p>
           </div>
         </div>
       </div>
+    {% endfor %}
       <div class="DonloadContainer">
         <h4 class="Confortaa-text">
             Download result on format
         </h4>
-          <a href="{% url 'download_file' file_path='uploaded/excel/analysis_results.' %}" download>
+          <a href="{% url 'download_file' file_path='uploaded/excel/analysis_results.xlsx' %}" download>
             <img src="{% static 'website/media/download-exl.svg' %}" alt="download excel">
           </a>
       </div>
